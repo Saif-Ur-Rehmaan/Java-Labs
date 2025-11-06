@@ -1,6 +1,8 @@
 import helpers.CropDataHelper;
+import helpers.MonthlyBudgetHelper;
 import models.CorpData;
 import models.MovieData;
+import models.MonthlyBudget;
 
 public class A1 {
     public static void Question1() {
@@ -37,6 +39,27 @@ public class A1 {
         // after running this func every divisions data wil be displayed seperately
         CropDataHelper.displayDivisionsData(CDataEast, CDataWest, CDataNorth, CDataSouth);
 
+    }
+
+    public void Question3(){
+        // fixed ...
+        MonthlyBudget budget = new MonthlyBudget(500.00 ,   150.00,65.00,50.00,250.00,30.00,100.00,150.00,75.00,50.00;);
+        // User defined
+        MonthlyBudget budget2 = new MonthlyBudget();
+        int housing=AppHelper.inputInt("Please Enter housing amount: "),
+            utilities=AppHelper.inputInt("Please Enter utilities amount: "),
+            householdExpenses=AppHelper.inputInt("Please Enter householdExpenses amount: "),
+            transportation=AppHelper.inputInt("Please Enter transportation amount: "),
+            food=AppHelper.inputInt("Please Enter food amount: "),
+            medical=AppHelper.inputInt("Please Enter medical amount: "),
+            insurance=AppHelper.inputInt("Please Enter insurance amount: "),
+            entertainment=AppHelper.inputInt("Please Enter entertainment amount: "),
+            clothing=AppHelper.inputInt("Please Enter clothing amount: "),
+            miscellaneous=AppHelper.inputInt("Please Enter miscellaneous amount: ");
+        // initilizing 2nd object 
+        budget2.set( housing, utilities, householdExpenses, transportation, food, medical, insurance, entertainment, clothing, miscellaneous );
+        // generating report 
+        MonthlyBudgetHelper.generateReport(budget,budget2)
     }
 
 }
