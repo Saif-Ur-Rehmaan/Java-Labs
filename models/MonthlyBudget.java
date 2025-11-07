@@ -3,7 +3,7 @@ package models;
 import base.AbstructClass;
 
 public class MonthlyBudget extends AbstructClass {
-    private double housing,
+    public double housing,
         utilities,
         householdExpenses,
         transportation,
@@ -14,12 +14,12 @@ public class MonthlyBudget extends AbstructClass {
         clothing,
         miscellaneous;
 
-    public MonthlyBudgetdouble (double _housing,double _utilities,double _householdExpenses,double _transportation,double _food,double _medical,double _insurance,double _entertainment,double _clothing,double _miscellaneous ){
+    public  MonthlyBudget(double _housing,double _utilities,double _householdExpenses,double _transportation,double _food,double _medical,double _insurance,double _entertainment,double _clothing,double _miscellaneous ){
 
         set( _housing, _utilities, _householdExpenses, _transportation, _food, _medical, _insurance, _entertainment, _clothing, _miscellaneous );
 
     }
-    public void  set( _housing,double _utilities,double _householdExpenses,double _transportation,double _food,double _medical,double _insurance,double _entertainment,double _clothing,double _miscellaneous ){
+    public void  set( double _housing,double _utilities,double _householdExpenses,double _transportation,double _food,double _medical,double _insurance,double _entertainment,double _clothing,double _miscellaneous ){
 
         housing = _housing;
         utilities = _utilities;
@@ -33,4 +33,5 @@ public class MonthlyBudget extends AbstructClass {
         miscellaneous=_miscellaneous;
 
     }
+
 }

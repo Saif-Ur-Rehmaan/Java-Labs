@@ -13,6 +13,7 @@ public class Lab02 {
                     "1. In Class Practice Task \n",
                     "2. Question 1 - Movie data Task \n",
                     "3. Question 2 - Crop Data Task \n",
+                    "4. Question 3 - Monthly Budget Task \n",
                     "6. Exit\n",
                     "*********************************\n");
 
@@ -27,6 +28,9 @@ public class Lab02 {
                     break;
                 case 3:
                     A1.Question2();
+                    break;
+                case 4:
+                    A1.Question3();
                     break;
                 default:
                     AppHelper.MyPrint("Invalid choice. Please enter a number between 1 and 6.");

@@ -1,3 +1,4 @@
+import helpers.AppHelper;
 import helpers.CropDataHelper;
 import helpers.MonthlyBudgetHelper;
 import models.CorpData;
@@ -15,7 +16,7 @@ public class A1 {
     }
 
     public static void Question2() {
-        CorpData CDataEast = new CorpData("East", 220, 20, 40,60);
+        CorpData CDataEast = new CorpData("East", 220, 20, 40, 60);
         CorpData CDataWest = new CorpData("West", 10, 20, 2, 40);
         CorpData CDataNorth = new CorpData("North", 230, 43520, 32420, 4320);
         CorpData CDataSouth = new CorpData("South", 330, 440, 550, 2340);
@@ -41,25 +42,27 @@ public class A1 {
 
     }
 
-    public void Question3(){
+    public static void Question3() {
         // fixed ...
-        MonthlyBudget budget = new MonthlyBudget(500.00 ,   150.00,65.00,50.00,250.00,30.00,100.00,150.00,75.00,50.00;);
+        MonthlyBudget goalBudget = new MonthlyBudget(500.00, 150.00, 65.00, 50.00, 250.00, 30.00, 100.00, 150.00, 75.00,
+                50.00);
         // User defined
-        MonthlyBudget budget2 = new MonthlyBudget();
-        int housing=AppHelper.inputInt("Please Enter housing amount: "),
-            utilities=AppHelper.inputInt("Please Enter utilities amount: "),
-            householdExpenses=AppHelper.inputInt("Please Enter householdExpenses amount: "),
-            transportation=AppHelper.inputInt("Please Enter transportation amount: "),
-            food=AppHelper.inputInt("Please Enter food amount: "),
-            medical=AppHelper.inputInt("Please Enter medical amount: "),
-            insurance=AppHelper.inputInt("Please Enter insurance amount: "),
-            entertainment=AppHelper.inputInt("Please Enter entertainment amount: "),
-            clothing=AppHelper.inputInt("Please Enter clothing amount: "),
-            miscellaneous=AppHelper.inputInt("Please Enter miscellaneous amount: ");
-        // initilizing 2nd object 
-        budget2.set( housing, utilities, householdExpenses, transportation, food, medical, insurance, entertainment, clothing, miscellaneous );
-        // generating report 
-        MonthlyBudgetHelper.generateReport(budget,budget2)
+        MonthlyBudget actual = new MonthlyBudget(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        int housing = AppHelper.inputInt("Please Enter housing amount: "),
+                utilities = AppHelper.inputInt("Please Enter utilities amount: "),
+                householdExpenses = AppHelper.inputInt("Please Enter householdExpenses amount: "),
+                transportation = AppHelper.inputInt("Please Enter transportation amount: "),
+                food = AppHelper.inputInt("Please Enter food amount: "),
+                medical = AppHelper.inputInt("Please Enter medical amount: "),
+                insurance = AppHelper.inputInt("Please Enter insurance amount: "),
+                entertainment = AppHelper.inputInt("Please Enter entertainment amount: "),
+                clothing = AppHelper.inputInt("Please Enter clothing amount: "),
+                miscellaneous = AppHelper.inputInt("Please Enter miscellaneous amount: ");
+        // initilizing 2nd object
+        actual.set(housing, utilities, householdExpenses, transportation, food, medical, insurance, entertainment,
+                clothing, miscellaneous);
+        // generating report
+        MonthlyBudgetHelper.generateReport(goalBudget, actual);
     }
 
 }
