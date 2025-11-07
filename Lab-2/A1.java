@@ -5,6 +5,7 @@ import models.CorpData;
 import models.MovieData;
 import models.MonthlyBudget;
 import models.Date;
+import models.Car;
 import enums.DateFormat;
 
 public class A1 {
@@ -88,5 +89,26 @@ public class A1 {
         d2.printDate(DateFormat.LONG_DATE);
         d2.printDate(DateFormat.SHORT_DATE);
         d2.printDate(DateFormat.INTERNATIONAL);
+    }
+
+    public static void Question5() {
+
+        Car gtr = new Car(1995, "Nissan");
+
+        gtr.accelerate();
+        gtr.brake();
+        
+        gtr.accelerate();
+        gtr.brake();
+        
+        gtr.accelerate();
+        gtr.brake();
+        
+        gtr.accelerate();
+        gtr.brake();
+        
+        gtr.accelerate();
+        gtr.brake();
+
     }
 }
