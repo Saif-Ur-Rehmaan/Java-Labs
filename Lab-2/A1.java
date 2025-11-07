@@ -4,6 +4,8 @@ import helpers.MonthlyBudgetHelper;
 import models.CorpData;
 import models.MovieData;
 import models.MonthlyBudget;
+import models.Date;
+import enums.DateFormat;
 
 public class A1 {
     public static void Question1() {
@@ -65,4 +67,26 @@ public class A1 {
         MonthlyBudgetHelper.generateReport(goalBudget, actual);
     }
 
+    public static void Question4() {
+        Date d1 = new Date();
+        AppHelper.MyPrint("=== DATE Object (no args constructor) ===");
+        d1.printDate(DateFormat.LONG_DATE);
+        d1.printDate(DateFormat.SHORT_DATE);
+        d1.printDate(DateFormat.INTERNATIONAL);
+
+        AppHelper.MyPrint("\n=== DATE Object (with args constructor) ===");
+        Date d2 = new Date();
+        boolean isvalid = false;
+        do {
+
+            int m = AppHelper.inputInt("Please Enter Month: "), d = AppHelper.inputInt("Please Enter Day: "),
+                    y = AppHelper.inputInt("Please Enter Year: ");
+            boolean isValidationPassed = d2.set(m, d, y);
+            isvalid = isValidationPassed;
+
+        } while (!isvalid);
+        d2.printDate(DateFormat.LONG_DATE);
+        d2.printDate(DateFormat.SHORT_DATE);
+        d2.printDate(DateFormat.INTERNATIONAL);
+    }
 }
