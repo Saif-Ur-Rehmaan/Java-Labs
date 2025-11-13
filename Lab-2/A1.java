@@ -3,9 +3,11 @@ import helpers.CropDataHelper;
 import helpers.MonthlyBudgetHelper;
 import models.CorpData;
 import models.MovieData;
+import models.Population;
 import models.MonthlyBudget;
 import models.Date;
 import models.Car;
+import models.Population;
 import enums.DateFormat;
 
 public class A1 {
@@ -97,18 +99,36 @@ public class A1 {
 
         gtr.accelerate();
         gtr.brake();
-        
+
         gtr.accelerate();
         gtr.brake();
-        
+
         gtr.accelerate();
         gtr.brake();
-        
+
         gtr.accelerate();
         gtr.brake();
-        
+
         gtr.accelerate();
         gtr.brake();
 
     }
+
+    public static void Question6() {
+
+        Population pop = new Population(100000, 1200, 800);
+
+        AppHelper.MyPrint("=== Initial Population Data ===");
+        AppHelper.MyPrint("Birth Rate: " + pop.getBirthRate());
+        AppHelper.MyPrint("Death Rate: " + pop.getDeathRate());
+
+        pop.setCurrentPopulation(120000);
+        pop.setAnnualBirth(1500);
+        pop.setAnnualDeath(1000);
+
+        AppHelper.MyPrint("\n=== Updated Population Data ===");
+        AppHelper.MyPrint("Birth Rate: " + pop.getBirthRate());
+        AppHelper.MyPrint("Death Rate: " + pop.getDeathRate());
+    }
+
 }
