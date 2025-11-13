@@ -51,7 +51,7 @@ public class Lab02 {
                     AppHelper.MyPrint("Invalid choice. Please enter a number between 1 and 6.");
             }
 
-        } while (choice != 6);
+        } while (choice != 9);
 
     }
 
