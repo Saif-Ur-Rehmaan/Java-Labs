@@ -6,8 +6,8 @@ import models.MovieData;
 import models.Population;
 import models.MonthlyBudget;
 import models.Date;
+import models.DayOfYear;
 import models.Car;
-import models.Population;
 import enums.DateFormat;
 
 public class A1 {
@@ -115,7 +115,6 @@ public class A1 {
     }
 
     public static void Question6() {
-
         Population pop = new Population(100000, 1200, 800);
 
         AppHelper.MyPrint("=== Initial Population Data ===");
@@ -131,4 +130,9 @@ public class A1 {
         AppHelper.MyPrint("Death Rate: " + pop.getDeathRate());
     }
 
+    public static void Question7() {
+        int date = AppHelper.inputInt("Enter Day of 365 days of year: ");
+        DayOfYear d1 = new DayOfYear(date);
+        d1.printDate();
+    }
 }
