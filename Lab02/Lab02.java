@@ -1,3 +1,4 @@
+package Lab02;
 import helpers.AppHelper;
 import models.Body;
 import models.Brain;
@@ -27,6 +28,7 @@ public class Lab02 {
                     inClassTask();
                     break;
                 case 2:
+
                     A1.Question1();
                     break;
                 case 3:

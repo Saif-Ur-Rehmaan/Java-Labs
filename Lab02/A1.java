@@ -1,3 +1,4 @@
+package Lab02;
 import helpers.AppHelper;
 import helpers.CropDataHelper;
 import helpers.MonthlyBudgetHelper;

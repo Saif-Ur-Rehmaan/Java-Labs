@@ -1,19 +1,16 @@
+package Lab03;
+
 import helpers.AppHelper;
 
-public class lab3 {
+public class Lab03 {
     public static void main(String[] args) {
 
         int choice;
         do {
             AppHelper.MyPrint(
                     "\n*********** Main Menu ***********\n",
-                    "1. Question 1 - musical composition Task \n",
-                    "2. Question 2 - Crop Data Task \n",
-                    "3. Question 3 - Monthly Budget Task \n",
-                    "4. Question 4 - Date Task \n",
-                    "5. Question 5 - Car Task \n",
-                    "6. Question 6 - Population Task \n",
-                    "7. Question 7 - Print Date Task \n",
+                    "1. Question 1 - Musical composition Task \n",
+                    "2. Question 2 - Book Task \n",
                     "8. Exit\n",
                     "*********************************\n");
 
@@ -21,6 +18,10 @@ public class lab3 {
 
             switch (choice) {
                 case 1:
+                    A2.Question1();
+                    break;
+                case 2:
+                    A2.Question2();
                     break;
 
                 default:

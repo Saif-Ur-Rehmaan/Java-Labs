@@ -1,3 +1,5 @@
+package Lab03;
+
 import helpers.AppHelper;
 import models.Fiction;
 import models.NationalAnthem;
