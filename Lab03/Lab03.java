@@ -11,6 +11,7 @@ public class Lab03 {
                     "\n*********** Main Menu ***********\n",
                     "1. Question 1 - Musical composition Task \n",
                     "2. Question 2 - Book Task \n",
+                    "3. Question 3 - Restaurant Meal  Task \n",
                     "8. Exit\n",
                     "*********************************\n");
 
@@ -22,6 +23,9 @@ public class Lab03 {
                     break;
                 case 2:
                     A2.Question2();
+                    break;
+                case 3:
+                    A2.Question3();
                     break;
 
                 default:

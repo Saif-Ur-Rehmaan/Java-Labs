@@ -4,6 +4,7 @@ import helpers.AppHelper;
 import models.Fiction;
 import models.NationalAnthem;
 import models.NonFiction;
+import models.RoomServiceMeal;
 
 public class A2 {
 
@@ -26,6 +27,12 @@ public class A2 {
 
         AppHelper.MyPrint("\n=== Non-Fiction Book ===");
         nonFictionBook.printInfo();
+    }
+
+    public static void Question3() {
+
+        RoomServiceMeal r = new RoomServiceMeal("Steak Dinner", 1999, 1202);
+        r.displayRoomServiceMeal();
     }
 
 }
