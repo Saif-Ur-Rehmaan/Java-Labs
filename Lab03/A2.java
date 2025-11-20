@@ -2,6 +2,7 @@ package Lab03;
 
 import helpers.AppHelper;
 import models.Fiction;
+import models.HouseThatIsAnInvestment;
 import models.NationalAnthem;
 import models.NonFiction;
 import models.RoomServiceMeal;
@@ -33,6 +34,11 @@ public class A2 {
 
         RoomServiceMeal r = new RoomServiceMeal("Steak Dinner", 1999, 1202);
         r.displayRoomServiceMeal();
+    }
+
+    public static void Question4() {
+        HouseThatIsAnInvestment house = new HouseThatIsAnInvestment(1000000, 500000, "Abc Street Karachi", "13x20");
+        house.display();
     }
 
 }
