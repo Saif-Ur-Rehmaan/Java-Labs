@@ -49,7 +49,6 @@ public class A1 {
     }
 
     public static void Question3() {
-        // fixed ...
         MonthlyBudget goalBudget = new MonthlyBudget(500.00, 150.00, 65.00, 50.00, 250.00, 30.00, 100.00, 150.00, 75.00,
                 50.00);
         // User defined
