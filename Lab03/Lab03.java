@@ -13,6 +13,7 @@ public class Lab03 {
                     "2. Question 2 - Book Task \n",
                     "3. Question 3 - Restaurant Meal  Task \n",
                     "4. Question 4 - House & Investment  Task \n",
+                    "5. Question 5 - Date Task \n",
                     "8. Exit\n",
                     "*********************************\n");
 
@@ -30,6 +31,9 @@ public class Lab03 {
                     break;
                 case 4:
                     A2.Question4();
+                    break;
+                case 5:
+                    A2.Question5();
                     break;
 
                 default:

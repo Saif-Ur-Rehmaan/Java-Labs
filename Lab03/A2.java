@@ -1,5 +1,6 @@
 package Lab03;
 
+import base.Date;
 import helpers.AppHelper;
 import models.Fiction;
 import models.HouseThatIsAnInvestment;
@@ -39,6 +40,55 @@ public class A2 {
     public static void Question4() {
         HouseThatIsAnInvestment house = new HouseThatIsAnInvestment(1000000, 500000, "Abc Street Karachi", "13x20");
         house.display();
+    }
+
+    public static void Question5() {
+
+        // === Requirement A: instantiate several dates and show them ===
+        System.out.println("=== Requirement A Tests ===");
+
+        Date d1 = new Date();
+        d1.setDate(50, 20, 5151); // month > 12 becomes 12
+        d1.showDate();
+
+        Date d2 = new Date();
+        d2.setDate(5, 40, 2023); // day > 31 becomes 31
+        d2.showDate();
+
+        Date d3 = new Date();
+        d3.setDate(10, 15, 2000);
+        d3.showDate();
+
+        // === Requirement B: test increaseDay() near end of month ===
+        System.out.println("\n=== Requirement B Tests (5 increments each) ===");
+
+        Date closeToEnd1 = new Date();
+        closeToEnd1.setDate(7, 30, 2024); // day 30 → 31 → rollover
+        testIncreaseFiveTimes(closeToEnd1);
+
+        Date closeToEnd2 = new Date();
+        closeToEnd2.setDate(11, 31, 1999); // edge case
+        testIncreaseFiveTimes(closeToEnd2);
+
+        // === Requirement C: rollover month AND year ===
+        System.out.println("\n=== Requirement C Test (12/29/2016 → 12/33/2016 → 1/1/2017) ===");
+
+        Date endOfYear = new Date();
+        endOfYear.setDate(12, 29, 2016);
+
+        for (int i = 0; i < 4; i++) {
+            endOfYear.increaseDay();
+            endOfYear.showDate();
+        }
+    }
+
+    public static void testIncreaseFiveTimes(Date d) {
+        System.out.println("Starting test for:");
+        d.showDate();
+        for (int i = 0; i < 5; i++) {
+            d.increaseDay();
+            d.showDate();
+        }
     }
 
 }
