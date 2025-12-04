@@ -1,5 +1,6 @@
 package Lab03;
 
+import base.BankAccount;
 import base.Date;
 import helpers.AppHelper;
 import models.Fiction;
@@ -89,6 +90,29 @@ public class A2 {
             d.increaseDay();
             d.showDate();
         }
+    }
+
+    public static void Question6() { 
+ 
+        BankAccount acc1 = new BankAccount();
+        System.out.println("Enter data for Account 1:");
+        acc1.enterAccountData();
+        acc1.displayAccount();
+        acc1.computeInterest(3); // 3 years of interest
+ 
+        BankAccount acc2 = new BankAccount();
+        System.out.println("Enter data for Account 2:");
+        acc2.enterAccountData();
+        acc2.displayAccount();
+        acc2.computeInterest(5); // 5 years of interest
+ 
+        BankAccount acc3 = new BankAccount();
+        System.out.println("Enter data for Account 3:");
+        acc3.enterAccountData();
+        acc3.displayAccount();
+        acc3.computeInterest(2); // 2 years of interest
+
+        System.out.println("===== End of Question 6 Testing =====");
     }
 
 }

@@ -22,6 +22,11 @@ public class AppHelper {
         return instance.nextInt();
     }
 
+    public static double inputDouble(String message) {
+        System.out.print(message);
+        return instance.nextDouble();
+    }
+
     public static Scanner getInstance() {
         return instance;
     }

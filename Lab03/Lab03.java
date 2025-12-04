@@ -14,6 +14,7 @@ public class Lab03 {
                     "3. Question 3 - Restaurant Meal  Task \n",
                     "4. Question 4 - House & Investment  Task \n",
                     "5. Question 5 - Date Task \n",
+                    "6. Question 6 - BankAccount Task \n",
                     "8. Exit\n",
                     "*********************************\n");
 
@@ -35,12 +36,15 @@ public class Lab03 {
                 case 5:
                     A2.Question5();
                     break;
+                case 6:
+                    A2.Question6();
+                    break;
 
                 default:
                     AppHelper.MyPrint("Invalid choice. Please enter a number between 1 and 6.");
             }
 
-        } while (choice != 6);
+        } while (choice != 8);
 
     }
 }
